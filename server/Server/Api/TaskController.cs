@@ -17,8 +17,11 @@ namespace Server.Api
 
         public TaskController(IHubContext hubContext)
         {
-            // Normally we would inject this
+            // Commented out hard coded global host version
             //
+            //_context = GlobalHost.ConnectionManager.GetHubContext<EventHub>();
+
+            // using DI
             _context = hubContext;
         }
 
